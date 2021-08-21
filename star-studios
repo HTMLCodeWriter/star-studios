@@ -1,0 +1,428 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Star Studios WIP</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Josefin+Sans:wght@400&family=Poppins:wght@500&display=swap&family=Oswald:wght@400&family=Rubik&display=swaps:wght@400&family=Poppins:wght@500&display=swap&family=Oswald:wght@400&family=Rampart+One&display=swap&" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet"/>
+    </head>
+    <style>
+        nav {
+  list-style-type: none;
+  margin: 0;
+  margin-top:530px;
+  padding: 10px;
+  overflow: hidden;
+  background:rgb(41, 41, 41);
+  position: absolute;
+  border-bottom:solid 1px white;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav a {
+  float: left;
+  display: block;
+  color:rgb(255, 255, 255);
+  text-align: center;
+  font-size:20px;
+  font-family: 'Poiret One', cursive;
+  padding: 14px 20px;
+  text-decoration: none;
+  }
+  
+  #settingsLink {
+      float:right;
+      margin-right:20px;
+  }
+  
+  footer {
+    text-align:center;
+    padding: 10px;
+    margin-bottom:-10px;
+    font-family: 'Montserrat', sans-serif;
+    margin-left:-20px;
+    margin-right:-20px;
+    border-top:solid 1px white;
+    background-color:rgb(41, 41, 41);
+    color:rgb(255, 255, 255);
+}
+  
+  .heading{
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Glen_Canyon_Dam_MC.jpg/1920px-Glen_Canyon_Dam_MC.jpg');
+      background-attachment: fixed;
+      margin-top:-10px;
+      margin-left:-20px;
+      margin-right:-20px;
+      height:75vh;
+      font-family: 'Josefin Sans', sans-serif;
+      color:white;
+      text-align:center;
+      font-size:50px;
+      padding-left:30px;
+      padding-top:100px;
+  }
+  
+  body {
+  padding: 0px 10px;
+  color:rgb(56, 56, 56);
+  background:rgb(255, 255, 255);
+  overflow-x: hidden
+}
+
+  nav a:hover {
+  background-color: rgb(255, 255, 255);
+  color:rgb(41, 41, 41);
+}
+
+.mission {
+  background-color: rgb(235, 235, 235);
+  border-left: 6px solid rgb(41, 41, 41);
+  margin-bottom: 15px;
+  padding: 4px 12px;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: rgb(189, 189, 189);
+}
+
+  .title{
+      text-align:center;
+      font-family: 'Oswald', sans-serif;
+      font-size:50px;
+      padding-top:20px;
+  }
+  
+  .cards {
+      text-align:center;
+  }
+  
+  .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-top:20px;
+  border-radius:10px;
+  margin-left:10px;
+  margin-bottom:20px;
+  background-color:rgb(171, 171, 171);
+  width: 40%;
+}
+
+#text-rotate {
+    font-size:40px;
+}
+
+body.blue-mode {
+  background-color:white;
+  color: rgb(0, 123, 255);
+}
+
+body.blue-mode nav {
+    background-color:rgb(0, 123, 255);
+    color:black;
+}
+
+body.blue-mode #foot {
+    background-color:rgb(0, 123, 255);
+}
+
+body.blue-mode #context {
+    border-left:solid 7px rgb(0, 123, 255);
+}
+
+body.blue-mode .mission {
+    background-color:rgb(237, 246, 255);
+    border-left:solid 6px rgb(0, 123, 255);
+}
+
+body.blue-mode nav a:hover {
+  background-color: rgb(255, 255, 255);
+  color:rgb(0, 123, 255);
+}
+
+.split {
+    height:1px;
+    background-color:rgb(41, 41, 41);
+}
+
+body.blue-mode .split {
+    height:1px;
+    background-color:rgb(0, 123, 255);
+}
+
+body.blue-mode .btn {
+    background-color:rgb(0,123,255);
+}
+
+body.blue-mode #explore {
+    color:rgb(0, 123, 255);
+}
+
+body.blue-mode #explore:hover {
+    color:white;
+    background-color:rgb(0, 123, 255);
+}
+
+#button-blue {
+  padding: 15px 25px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color:white;
+  background-color:rgb(0, 123, 255);
+  border: solid 1px white;
+  border-radius: 10px;
+  box-shadow: 0 9px #999;
+}
+
+#button-blue:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+.fade-in-text {
+  animation: fadeIn linear 2s;
+  -webkit-animation: fadeIn linear 2s;
+  -moz-animation: fadeIn linear 2s;
+  -o-animation: fadeIn linear 2s;
+  -ms-animation: fadeIn linear 2s;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+#switch-blue {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 60px;
+	height: 30px;
+	background: rgb(41, 41, 41);
+	border:solid 1px white;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+	margin-bottom:10px;
+}
+
+#switch-blue:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 20px;
+	height: 20px;
+	background: rgb(255, 255, 255);
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + #switch-blue {
+	background: rgb(0, 123, 255);
+}
+
+input:checked + #switch-blue:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+#switch-blue:active:after {
+	width: 20px;
+}
+
+#context {
+    font-family: 'Poppins', sans-serif;
+    border-left:solid 7px rgb(41, 41, 41);
+    padding-left:10px;
+}
+
+#slogan {
+    text-transform:capitalize;
+    font-family:'Poppins', sans-serif;
+    text-align:center;
+    padding:10px;
+    font-size:25px;
+}
+
+#hire {
+    text-align:center;
+    font-family: 'Rampart One', cursive;
+    font-size:100px;
+    color:rgb(41, 41, 41);
+    
+}
+
+#explore {
+    padding-left:30px;
+    padding-right:30px;
+    padding-top:15px;
+    padding-bottom:15px;
+    color:rgb(41, 41, 41);
+    border:none;
+}
+
+
+#explore:hover {
+    border:none;
+    background-color:rgb(41, 41, 41);
+    color:white;
+}
+
+
+
+  
+    </style>
+    <body>
+    <div class="heading">
+    <h1 class="fade-in-text">Star Studios</h1>
+    <h2><span id="text-rotate"></span></h2>
+      <button id="explore" onClick="slightScroll()">EXPLORE</button>
+    </div>
+        <nav id="navigation">
+        <a href="javascript:page('home');" id="homeLink" class="selector material-icons-outlined fade-in-text">home</a>
+        <a href="javascript:page('about');" id="aboutLink" class="selector material-icons-outlined fade-in-text">subject</a>
+        <a href="javascript:page('join');" id="joinLink" class="selector material-icons-outlined fade-in-text">person_add</a>
+        <a href="javascript:page('team');" id="teamLink" class="selector material-icons-outlined fade-in-text">groups</a>
+        <a href="javascript:page('projects');" id="projectsLink" class="selector material-icons-outlined fade-in-text">assignment</a>
+        <a href="javascript:page('settings');" id="settingsLink" class="selector material-icons-outlined fade-in-text">settings</a>
+        </nav>
+        <main>
+        
+        <div class="page" id="home">
+            <h1 class="title" >Home</h1>
+            <div class="mission">
+  <p>Our mission at Star Studios is creating quality websites and softwares with pride, sincerity and authenticity</p>
+</div>
+
+            </div>
+            
+        <div class="page" id="about">
+            <h1 class="title">About Us</h1>
+            <p id="context" style=" margin-right:650px;">Star Studios is a Professional Software Platform. We create Webpages and Softwares.We're dedicated to providing you the best software, with a focus on dependability and passion. We're working to turn our passion for software into an amazing website just for you.</p>
+            <br>
+            <p id="context" style=" margin-left:650px;">We are a group of coders who will be the future of Computer Programming. Here at Star Studios, we believe that coding should be visioned in an enjoyable way.We code simple but amazing games, softwares, and webpages in HTML, CSS and Javascript.</p>
+            <br>
+            <hr class="split">
+            <p id="slogan" >We are a <strong>small team</strong> trying to make a <strong>big differnece</strong></p>
+        </div>
+        
+        <div class="page" id="join">
+            <h1 class="title">Join Our Team</h1>
+            <h1 id="hire">We are hiring!!</h1>
+        </div>
+        
+        <div class="page" id="team">
+            <h1 class="title">Our Team</h1>
+            
+            </div>
+        
+        <div class="page" id="projects">
+            <h1 class="title">Projects</h1>
+            </div>
+            
+        <div class="page" id="settings">
+            <h1 class="title">Settings</h1>
+            <input type="checkbox" id="switch" onclick="blueFunction()" ><label for="switch" id="switch-blue">Toggle</label>
+            <p style="font-family:'Poppins', sans-serif;" >Toggle Blue Mode</p>
+            </div>
+            
+        </main>
+        
+        <footer id="foot">
+        <p>&copy; 2021 Star Studios<br>___________________________</p>
+        <p>All Rights Reserved</p>
+    </footer>
+    </body>
+    <script>
+function blueFunction() {
+   var element = document.body;
+   element.classList.toggle("blue-mode");
+}
+</script>
+    <script>
+    var pages = document.getElementsByClassName("page");
+    var pageLinks = document.getElementsByTagName("a");
+        var page = function(thepage){
+            for (var i = 0; i < pages.length;i++){
+                pages[i].style.display = "none";
+            }
+            for (var j = 0; j < pageLinks.length;j++){
+                pageLinks[j].classList.remove("current");
+            }
+            document.getElementById(thepage).style.display = "block";
+            document.getElementById(thepage+"Link").classList.add("current");
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
+            
+        };
+        page("home");
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+        <script>
+            var options = {
+                strings: ["Programming With Passion"],
+                typeSpeed: 120,
+                loop: !1
+            };
+            new Typed('#text-rotate', options);
+        </script>
+        <script type='application/javascript'>
+    
+        var scenes = document.getElementsByClassName('page');
+      
+        function showPage(index) {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+        for (var i = 0; i < scenes.length; i++) {
+          scenes[i].style.display = 'none';
+        }
+        scenes[index].style.display = 'block';
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      };
+      
+        function slightScroll() {
+        window.scrollTo({
+          top: 350,
+          behavior: "smooth"
+        });
+      };
+      
+        function backToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        })
+      };
+      
+        function slightScroll() {
+        window.scrollTo({
+          top: 350,
+          behavior: "smooth"
+        });
+      };
+      
+    </script>
+</html>
